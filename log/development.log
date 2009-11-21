@@ -1,0 +1,5 @@
+
+
+Processing HomeController#index (for ::1 at 2009-11-21 12:33:00) [GET]
+Rendering home/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
