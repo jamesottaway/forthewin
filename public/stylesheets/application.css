@@ -1,0 +1,29 @@
+html
+{
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+body > footer
+{
+  position: absolute;
+  bottom: 0px;
+  padding: 5px 0;
+  width: 100%;
+  background-color: #ccc;
+  
+  font-size: 11pt;
+  text-transform: lowercase;
+}
+
+body > footer > p
+{
+  text-align: right;
+  margin: 0 auto;
+  width: 80%;
+}
+
+body > footer > p > a
+{
+  text-decoration: none;
+  color: #777;
+}
