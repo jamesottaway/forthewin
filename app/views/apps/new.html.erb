@@ -1,0 +1,7 @@
+<% semantic_form_for @app, :url => app_path(@app.id) do |f| %>
+	<%= f.input :title %>
+	<%= f.input :author %>
+	<%= f.input :demo %>
+	<%= f.input :source %>
+	<%= f.submit "Submit" %>
+<% end %>

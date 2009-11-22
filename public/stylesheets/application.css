@@ -3,6 +3,12 @@ html
   font-family: Helvetica, Verdana, sans-serif;
 }
 
+body > nav
+{
+  padding: 5px;
+  height: 30px;
+}
+
 body > footer
 {
   position: absolute;
