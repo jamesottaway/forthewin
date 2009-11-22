@@ -1,0 +1,17 @@
+<h1><%= @app.title %></h1>
+<p><b>Author:</b><%= @app.author %></p>
+<p><b>Demo:</b><%= @app.demo %></p>
+<p><b>Source:</b><%= @app.source %></p>
+<p><b>Description:</b><%= @app.description %></p>
+<p><b>Sample Code:</b><%= @app.samplecode %></p>
+
+<fieldset>
+	<h2>Comments</h2>
+	<% @app.comments.each do |comment| %>
+		<p><b><%= comment.user.username %></b><%= comment.text %>
+	<% end %>
+	<% semantic_form_for [@app, @comment] do |f| %>
+		<%= f.input :text, :label => "Comment", :as => :text %>
+		<%= f.submit "Add Comment" %>
+	<% end %>
+</fieldset>
