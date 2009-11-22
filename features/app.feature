@@ -12,7 +12,6 @@ Feature: App
     And I fill in "Link to Source" with "http://computer:9331/forthewin.git"
     And I fill in "Description" with "Why hello there"
     And I fill in "Sample Code" with "`@user = User.new`"
-    And I fill in "Contributors" with "James, Lucas"
     And I press "Submit"
     Then I should see "App submitted successfully"
 
