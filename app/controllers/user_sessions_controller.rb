@@ -8,7 +8,7 @@ class UserSessionsController < ApplicationController
     
     if @user_session.save
       redirect_to session[:return_to] || root_url
-      flash[:notice] = "Welcome back #{current_user.name}"
+      flash[:notice] = "Hi, #{current_user.username}"
     else
       render(:action => "new")
       flash[:notice] = "Wrong username and/or password"

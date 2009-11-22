@@ -21,11 +21,3 @@ Feature: User
     And I fill in "Password" with "12345"
     And I press "Login"
     Then I should see "Hi, Thomas"
-  
-  Scenario: Allow a user to edit their settings
-  
-  Scenario: Allow a user to sign in with twetter
-
-  
-  
-  
