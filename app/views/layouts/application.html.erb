@@ -1,19 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>application.html</title>
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  	<%= stylesheet_link_tag "reset.css" %>
+    <%= stylesheet_link_tag "application.css" %>
+  	<title>for the win</title>
 	
-</head>
+  </head>
 
-<body>
-<%= flash[:notice] %>
-<%= link_to "Register", new_user_path %>
-
-<%= yield %>
-
-</body>
+  <body>
+    <nav>
+      <%= flash[:notice] %>
+      <%= link_to "Register", new_user_path %>
+    </nav>
+    <section>
+      <%= yield %>
+    </section>
+    <footer>
+      <p>Designed by <%= link_to "James Ottaway", "http://james.ottaway.mp", :rel => "author" %>, <%= link_to "Lucas Willett", "http://sevenlights.net", :rel => "author" %> and <%= link_to "Thomas Sinclair", "http://icdesign.com.au/", :rel => "author" %> at Railscamp '09. &copy; 2009</p>
+    </footer>
+  </body>
 </html>
