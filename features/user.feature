@@ -17,10 +17,10 @@ Feature: User
     Given I have an existing user
     And I am on the homepage
     When I follow "Login"
-    And I fill in "Username" with "ltw_"
-    And I fill in "Password" with "password"
+    And I fill in "Username" with "Thomas"
+    And I fill in "Password" with "12345"
     And I press "Login"
-    Then I should see "Hi, ltw_"
+    Then I should see "Hi, Thomas"
   
   Scenario: Allow a user to edit their settings
   
