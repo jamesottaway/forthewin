@@ -16,6 +16,9 @@ Feature: App
     Then I should see "App submitted successfully"
     And I should see "Bananajour"
 
-  Scenario: Allow user to vote on application
+  Scenario: Ask an anonymous user to log in when trying to submit an app
+    Given I am on the homepage
+    When I follow "Submit App"
+    Then I should see "You must be logged in to access this page"
 
   Scenario: Allow user to comment on application

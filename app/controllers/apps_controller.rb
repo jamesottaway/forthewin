@@ -1,4 +1,5 @@
 class AppsController < ApplicationController
+  before_filter :require_user, :only => [:new]
   
   def new
     @app = App.new
