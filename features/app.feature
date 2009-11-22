@@ -14,6 +14,7 @@ Feature: App
     And I fill in "Sample Code" with "`@user = User.new`"
     And I press "Submit"
     Then I should see "App submitted successfully"
+    And I should see "Bananajour"
 
   Scenario: Allow user to vote on application
 
