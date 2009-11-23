@@ -4,7 +4,8 @@ Feature: App
   I want to submit, vote and comment on apps
 
   Scenario: Allow user to submit app
-    Given I am on the homepage
+    Given I am logged in as a user
+    And I am on the homepage
     When I follow "Submit App"
     And I fill in "Title" with "Bananajour"
     And I fill in "Author" with "Tim"
@@ -15,6 +16,7 @@ Feature: App
     And I press "Submit"
     Then I should see "App submitted successfully"
     And I should see "Bananajour"
+    And I should see "http://computer:9331/forthewin.git"
 
   Scenario: Ask an anonymous user to log in when trying to submit an app
     Given I am on the homepage
@@ -22,6 +24,7 @@ Feature: App
     Then I should see "You must be logged in to access this page"
 
   Scenario: Allow user to comment on application
+<<<<<<< HEAD
   
   Scenario: Allow user to delete one of their comments
   
@@ -32,3 +35,10 @@ Feature: App
     When I follow "Bananajour"
     And I follow "Vote Up"
     Then I should see "Thanks for voting!"
+=======
+    Given I have an existing app
+    And I fill in "Comment" with "Fuck this shit"
+    And I press "Add Comment"
+    Then I should see "Thanks for the comment"
+    And I should see "Fuck this shit"
+>>>>>>> 256a1118750dabc1056e38489ba4c16e046a1487
