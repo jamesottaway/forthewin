@@ -3,5 +3,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :user_sessions
   map.resources :apps
   
-  map.root :controller => 'home'
+  map.root :controller => 'apps'
 end
