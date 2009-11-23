@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091122022456) do
+ActiveRecord::Schema.define(:version => 20091123053851) do
 
   create_table "apps", :force => true do |t|
     t.string   "title"
@@ -37,6 +37,15 @@ ActiveRecord::Schema.define(:version => 20091122022456) do
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.string   "votable_type"
+    t.integer  "votable_id"
+    t.integer  "user_id"
+    t.boolean  "positive"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
