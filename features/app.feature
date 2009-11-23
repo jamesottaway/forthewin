@@ -27,6 +27,8 @@ Feature: App
   
   Scenario: Allow user to vote on an application
     Given I have an existing app
+    And I am on the homepage
+    Then show me the page
     When I follow "Bananajour"
     And I follow "Vote Up"
     Then I should see "Voted successfully"

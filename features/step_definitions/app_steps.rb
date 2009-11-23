@@ -1,15 +1,3 @@
 Given /^I have an existing app$/ do
-  Given 'I am logged in as a user'
-    And 'I am on the homepage'
-    When 'I follow "Submit App"'
-    And 'I fill in "Title" with "Bananajour"'
-    And 'I fill in "Author" with "Tim"'
-    And 'I fill in "Link to Demo" with "http://sup/"'
-    And 'I fill in "Link to Source" with "http://computer:9331/forthewin.git"'
-    And 'I fill in "Description" with "Why hello there"'
-    And 'I fill in "Sample Code" with "`@user = User.new`"'
-    And 'I press "Submit"'
-    Then 'I should see "App submitted successfully"'
-    And 'I should see "Bananajour"'
-    And 'I should see "http://computer:9331/forthewin.git"'
+  App.make
 end
