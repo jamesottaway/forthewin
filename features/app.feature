@@ -22,3 +22,5 @@ Feature: App
     Then I should see "You must be logged in to access this page"
 
   Scenario: Allow user to comment on application
+  
+  Scenario: Allow user to delete one of their comments

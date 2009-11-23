@@ -1,2 +1,9 @@
-<h1>for the win</h1>
-<p>an app that is win</p>
+  <h1>for the win</h1>
+  <p>an app that is win</p>
+
+  <% if @app != nil then @app.each do |app| %>
+    <section>
+      <p><%= app.title %></p>
+      <p><%= app.description %></p>
+    </section>
+  <% end end %>

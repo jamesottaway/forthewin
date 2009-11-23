@@ -1,12 +1,59 @@
+/* broad range */
+
 html
 {
   font-family: Helvetica, Verdana, sans-serif;
 }
 
+a
+{
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover
+{
+  color: #999;
+}
+
+h1 
+{
+  font-size: 22pt;
+}
+
+/* specific range */
+
 body > nav
 {
-  padding: 5px;
+  padding: 5px 0;
   height: 30px;
+  width: 100%;
+}
+
+body > nav > ul
+{
+  width: 80%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+body > nav > ul > li
+{
+  display: inline-block;
+  margin-top: 5px;
+  padding: 0px 10px;
+  border-right: 2px solid #aaa;
+}
+
+body > nav > ul > li:last-child
+{
+  border: 0px;
+}
+
+body > section
+{
+  width: 80%;
+  margin: 0 auto;
 }
 
 body > footer
@@ -21,6 +68,16 @@ body > footer
   text-transform: lowercase;
 }
 
+form > li > label
+{
+}
+
+form > li > label > abbr
+{
+  color: red;
+  padding: 0px 5px;
+}
+
 body > footer > p
 {
   text-align: right;
@@ -28,8 +85,3 @@ body > footer > p
   width: 80%;
 }
 
-body > footer > p > a
-{
-  text-decoration: none;
-  color: #777;
-}
