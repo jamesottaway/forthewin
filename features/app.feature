@@ -29,4 +29,4 @@ Feature: App
     Given I have an existing app
     When I follow "Bananajour"
     And I follow "Vote Up"
-    Then I should see "Voted successfully"
+    Then I should see "Thanks for voting!"
