@@ -24,3 +24,9 @@ Feature: App
   Scenario: Allow user to comment on application
   
   Scenario: Allow user to delete one of their comments
+  
+  Scenario: Allow user to vote on an application
+    Given I have an existing app
+    When I follow "Bananajour"
+    And I follow "Vote Up"
+    Then I should see "Voted successfully"
