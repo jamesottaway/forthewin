@@ -4,10 +4,13 @@ class VotesController < ApplicationController
   
   def create
     @vote = @app.votes.build(params[:vote].merge!(:user => current_user))
+    flash.now[:notice] = "Thanks for voting!"
   end
   
   def destroy
     @vote = Vote.find(params[:id])
+    @vote.destroy
+    flash.now[:notice] = "Your vote has been removed"
   end
   
   private
