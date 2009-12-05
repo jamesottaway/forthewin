@@ -9,17 +9,22 @@
   </head>
   
   <body>
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Register", new_user_path %></li>
-        <li><%= link_to "Login", new_user_session_path %></li>
-        <li><%= link_to "Submit App", new_app_path %></li>
-      </ul>
-    </nav>
     <section>
-      <%= flash[:notice] %>
-      <%= yield %>
+      <header>
+        <%= image_tag('forthewin.png') %>
+        <nav>
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Register", new_user_path %></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Submit App", new_app_path %></li>
+          </ul>
+        </nav>
+      </header>
+      <article>
+        <%= flash[:notice] %>
+        <%= yield %>
+      </article>
     </section>
     <footer>
       <p>Created by <%= link_to "James Ottaway", "http://james.ottaway.mp", :rel => "author" %>, <%= link_to "Lucas Willett", "http://sevenlights.net", :rel => "author" %> and <%= link_to "Thomas Sinclair", "http://icdesign.com.au/", :rel => "author" %> at Railscamp #6. &copy; 2009</p>

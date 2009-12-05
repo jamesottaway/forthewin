@@ -1,19 +1,8 @@
 /* broad range */
-
 html
 {
   font-family: Helvetica, Verdana, sans-serif;
-}
-
-a
-{
-  text-decoration: none;
-  color: #666;
-}
-
-a:hover
-{
-  color: #999;
+  background-color: #777;
 }
 
 h1 
@@ -21,55 +10,113 @@ h1
   font-size: 22pt;
 }
 
-/* specific range */
-
-body > nav
+h2
 {
-  padding: 5px 0;
+  font-size: 18pt;
+  line-height: 2em;
+}
+
+nav a
+{
+  color: #fff;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+nav a:hover
+{
+  color: #fff;
+}
+
+/* specific range */
+body > section
+{
+  width: 100%;
+  margin: 0 auto;
+}
+
+body > section > header
+{
+  position: relative;
+  height: 100px;
+}
+
+body > section > header > img
+{
+  position: absolute;
+  left: 5%;
+}
+
+body > section > header > nav
+{
+  position: absolute;
+  bottom: 30px;
+  line-height: 1.5em;
   height: 30px;
   width: 100%;
 }
 
-body > nav > ul
+body > section > header > nav > ul
 {
   width: 80%;
+  padding-right: 35px;
   margin: 0 auto;
   text-align: right;
 }
 
-body > nav > ul > li
+body > section > header > nav > ul > li
 {
+  font-size: 15pt;
   display: inline-block;
-  margin-top: 5px;
-  padding: 0px 10px;
-  border-right: 2px solid #aaa;
 }
 
-body > nav > ul > li:last-child
-{
-  border: 0px;
+body > section > header > nav > ul > li > a
+{  
+  line-height: 3.5em;
+  margin: 0px 10px;
+  padding: 0px 5px 5px;
 }
 
-body > section
+body > section > header > nav > ul > li > a:hover
 {
+  border-bottom: 2px solid #fff;
+}
+
+body > section > article
+{
+  -moz-border-radius: 40px; 
+  -webkit-border-radius: 40px;
+  
+  padding-top: 30px;
+  background-color: #f9f9f9;
+  min-height: 300px;
   width: 80%;
   margin: 0 auto;
 }
 
 body > footer
 {
-  position: absolute;
-  bottom: 0px;
-  padding: 5px 0;
+  color: #fff;
+  
   width: 100%;
-  background-color: #ccc;
   
   font-size: 11pt;
   text-transform: lowercase;
 }
 
-form > li > label
+body > footer > p
 {
+  padding-right: 60px;
+  line-height: 2em;
+  text-align: right;
+  margin: 0 auto;
+  width: 80%;
+}
+
+body > footer > p > a
+{
+  color: #c3d9ff;
+  text-decoration: none;
 }
 
 form > li > label > abbr
@@ -77,11 +124,3 @@ form > li > label > abbr
   color: red;
   padding: 0px 5px;
 }
-
-body > footer > p
-{
-  text-align: right;
-  margin: 0 auto;
-  width: 80%;
-}
-
