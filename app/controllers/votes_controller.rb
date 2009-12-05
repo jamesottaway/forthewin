@@ -4,10 +4,8 @@ class VotesController < ApplicationController
   
   def create
     @vote = @app.votes.build(:user => current_user)
-    if @vote.save
-      redirect_to @vote.votable
-      flash[:notice] = "Thanks for voting!"
-    end
+    flash[:notice] = @vote.save ? "Thanks for voting!" : "Sorry! You have already voted."
+    redirect_to @vote.votable
   end
   
   def destroy

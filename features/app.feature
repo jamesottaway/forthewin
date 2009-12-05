@@ -26,19 +26,29 @@ Feature: App
   Scenario: Allow user to comment on application
     Given I have an existing app
     And I am logged in as a user
-    And I am on the homepage
-    And I follow "Bananajour"
-    And I fill in "New Comment" with "Fuck this shit"
+    And I have gone to the "Bananajour" app page
+    And I fill in "New Comment" with "So hot! Want to touch the hiney..."
     And I press "Add Comment"
     Then I should see "Thanks for the comment"
-    And I should see "Fuck this shit"
+    And I should see "So hot! Want to touch the hiney..."
   
   Scenario: Allow user to delete one of their comments
+    Given I have an existing comment
+    And I have gone to the "Bananajour" app page
+    When I follow "Delete Comment"
+    Then I should see "Your comment has been deleted."
+    And I should not see "Fuck this shit."
   
   Scenario: Allow user to vote on an application
     Given I have an existing app
     And I am logged in as a user
-    And I am on the homepage
-    When I follow "Bananajour"
-    And I press "Vote Up"
+    And I have gone to the "Bananajour" app page
+    When I press "Vote Up"
     Then I should see "Thanks for voting!"
+    
+  Scenario: Stop a user from voting twice on one app
+    Given I have an existing app
+    And I have voted on an existing application
+    And I have gone to the "Bananajour" app page
+    When I press "Vote Up"
+    Then I should see "Sorry! You have already voted."
