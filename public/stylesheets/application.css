@@ -1,54 +1,45 @@
 /* broad range */
-html
-{
+html {
   font-family: Helvetica, Verdana, sans-serif;
   background-color: #777;
 }
 
-h1 
-{
+h1 {
   font-size: 22pt;
 }
 
-h2
-{
+h2 {
   font-size: 18pt;
   line-height: 2em;
 }
 
-nav a
-{
+body > section > header > nav a {
   color: #fff;
   text-transform: lowercase;
   text-decoration: none;
 }
 
-nav a:hover
-{
+body > section > header > nav a:hover {
   color: #fff;
 }
 
 /* specific range */
-body > section
-{
+body > section {
   width: 100%;
   margin: 0 auto;
 }
 
-body > section > header
-{
+body > section > header {
   position: relative;
   height: 100px;
 }
 
-body > section > header > img
-{
+body > section > header > img {
   position: absolute;
   left: 5%;
 }
 
-body > section > header > nav
-{
+body > section > header > nav {
   position: absolute;
   bottom: 30px;
   line-height: 1.5em;
@@ -56,37 +47,31 @@ body > section > header > nav
   width: 100%;
 }
 
-body > section > header > nav > ul
-{
+body > section > header > nav > ul {
   width: 80%;
   padding-right: 35px;
   margin: 0 auto;
   text-align: right;
 }
 
-body > section > header > nav > ul > li
-{
+body > section > header > nav > ul > li {
   font-size: 15pt;
   display: inline-block;
 }
 
-body > section > header > nav > ul > li > a
-{  
+body > section > header > nav > ul > li > a {
   line-height: 3.5em;
   margin: 0px 10px;
   padding: 0px 5px 5px;
 }
 
-body > section > header > nav > ul > li > a:hover
-{
+body > section > header > nav > ul > li > a:hover {
   border-bottom: 2px solid #fff;
 }
 
-body > section > article
-{
-  -moz-border-radius: 40px; 
+body > section > article {
+  -moz-border-radius: 40px;
   -webkit-border-radius: 40px;
-  
   padding-top: 30px;
   background-color: #f9f9f9;
   min-height: 300px;
@@ -98,18 +83,48 @@ body > section > article > section {
   margin-left: 250px;
 }
 
-body > footer
-{
+body > section > article > section textarea {
+  display: block;
+  height: 100px;
+  width: 80%;
+  margin: 5px 0px 10px;
+}
+
+body > section > article > section ul {
+  padding: 10px 0px;
+}
+
+body > section > article > section ul > li {
+  padding: 5px 0px;
+}
+
+body > section > article > section ul label {
+  display: inline-block;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 15px;
+  width: 120px;
+}
+
+body > section > article > section fieldset {
+  border-top: 1px solid #000;
+  margin: 5px 20px 20px;
+  padding: 20px 5px 5px 20px;
+}
+
+body > section > article > section fieldset > legend {
+  margin-left: 10px;
+  padding: 0px 3px;
+}
+
+body > footer {
   color: #fff;
-  
   width: 100%;
-  
   font-size: 11pt;
   text-transform: lowercase;
 }
 
-body > footer > p
-{
+body > footer > p {
   padding-right: 60px;
   line-height: 2em;
   text-align: right;
@@ -117,24 +132,25 @@ body > footer > p
   width: 80%;
 }
 
-body > footer > p > a
-{
+body > footer > p > a {
   color: #c3d9ff;
   text-decoration: none;
 }
 
-form > li > label > abbr
-{
+form > li > label > abbr {
   color: red;
   padding: 0px 5px;
 }
 
 form li {
   list-style: none;
-  
 }
 
 form li input {
   display: inline;
   margin: 5px 0 5px 10px;
+}
+
+#vote_submit {
+  padding: 5px;
 }

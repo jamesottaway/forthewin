@@ -35,5 +35,6 @@ class AppsController < ApplicationController
   def show
     @app = App.find(params[:id])
     @comment = Comment.new
+    @vote = Vote.new
   end
 end

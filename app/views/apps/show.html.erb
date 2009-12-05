@@ -1,17 +1,43 @@
+<% semantic_form_for [@app, @vote] do |f| %>
+  <%= f.submit "Vote Up" %>
+<% end %>
 <h1><%= @app.title %></h1>
-<p><b>Author:</b><%= @app.author %></p>
-<p><b>Demo:</b><%= @app.demo %></p>
-<p><b>Source:</b><%= @app.source %></p>
-<p><b>Description:</b><%= @app.description %></p>
-<p><b>Sample Code:</b><%= @app.samplecode %></p>
-
+<ul>
+  <li>
+    <label for="author">Author:</label><%= @app.author %>
+  </li>
+  <li>
+    <label>Demo:</label>
+    <%= @app.demo %>
+  </li>
+  <li>
+    <label>Source:</label>
+    <%= @app.source %></li>
+  <li><label>Description:</label><%= @app.description %></li>
+  <li>
+    <label>Sample Code:</label>
+    <code><%= @app.samplecode %></code>
+  </li>
+</ul>
 <fieldset>
-	<h2>Comments</h2>
+  <legend>
+    Comments
+  </legend>
+
+	<ul>  
 	<% @app.comments.each do |comment| %>
-		<p><b><%= comment.user.username %></b><%= comment.text %>
+	  <li>
+	    <header>
+	      <%= comment.user.username %>
+	    </header>
+	    <p><%= comment.text %></p>
+	  </li>
 	<% end %>
+  </ul>
+	
 	<% semantic_form_for [@app, @comment] do |f| %>
-		<%= f.input :text, :label => "Comment", :as => :text %>
+		<%= f.input :text, :label => "New Comment", :as => :text %>
 		<%= f.submit "Add Comment" %>
 	<% end %>
+	
 </fieldset>

@@ -28,7 +28,7 @@ Feature: App
     And I am logged in as a user
     And I am on the homepage
     And I follow "Bananajour"
-    And I fill in "Comment" with "Fuck this shit"
+    And I fill in "New Comment" with "Fuck this shit"
     And I press "Add Comment"
     Then I should see "Thanks for the comment"
     And I should see "Fuck this shit"
@@ -40,5 +40,5 @@ Feature: App
     And I am logged in as a user
     And I am on the homepage
     When I follow "Bananajour"
-    And I follow "Vote Up"
+    And I press "Vote Up"
     Then I should see "Thanks for voting!"
