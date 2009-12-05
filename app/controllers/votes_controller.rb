@@ -3,17 +3,17 @@ class VotesController < ApplicationController
   before_filter :find_app
   
   def create
-    @vote = @app.votes.build(params[:vote].merge!(:user => current_user))
+    @vote = @app.votes.build(:user => current_user)
     if @vote.save
-      redirect_to @vote.app
-      flash.now[:notice] = "Thanks for voting!"
+      redirect_to @vote.votable
+      flash[:notice] = "Thanks for voting!"
     end
   end
   
   def destroy
     @vote = Vote.find(params[:id])
     @vote.destroy
-    flash.now[:notice] = "Your vote has been removed."
+    flash[:notice] = "Your vote has been removed."
   end
   
   private
