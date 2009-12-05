@@ -24,18 +24,21 @@ Feature: App
     Then I should see "You must be logged in to access this page"
 
   Scenario: Allow user to comment on application
-  
-  Scenario: Allow user to delete one of their comments
     Given I have an existing app
+    And I am logged in as a user
+    And I am on the homepage
+    And I follow "Bananajour"
     And I fill in "Comment" with "Fuck this shit"
     And I press "Add Comment"
     Then I should see "Thanks for the comment"
     And I should see "Fuck this shit"
   
+  Scenario: Allow user to delete one of their comments
+  
   Scenario: Allow user to vote on an application
     Given I have an existing app
+    And I am logged in as a user
     And I am on the homepage
-    Then show me the page
     When I follow "Bananajour"
     And I follow "Vote Up"
     Then I should see "Thanks for voting!"

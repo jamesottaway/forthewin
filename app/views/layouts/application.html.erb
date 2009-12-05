@@ -22,8 +22,10 @@
         </nav>
       </header>
       <article>
-        <%= flash[:notice] %>
-        <%= yield %>
+        <section>
+          <%= flash[:notice] %>
+          <%= yield %>
+        </section>
       </article>
     </section>
     <footer>

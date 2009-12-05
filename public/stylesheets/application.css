@@ -94,6 +94,10 @@ body > section > article
   margin: 0 auto;
 }
 
+body > section > article > section {
+  margin-left: 250px;
+}
+
 body > footer
 {
   color: #fff;
@@ -123,4 +127,14 @@ form > li > label > abbr
 {
   color: red;
   padding: 0px 5px;
+}
+
+form li {
+  list-style: none;
+  
+}
+
+form li input {
+  display: inline;
+  margin: 5px 0 5px 10px;
 }
