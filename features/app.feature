@@ -12,7 +12,6 @@ Feature: App
     And I fill in "Link to Demo" with "http://sup/"
     And I fill in "Link to Source" with "http://computer:9331/forthewin.git"
     And I fill in "Description" with "Why hello there"
-    And I fill in "Sample Code" with "`@user = User.new`"
     And I press "Submit"
     Then I should see "App submitted successfully"
     And I should see "Bananajour"
@@ -35,7 +34,7 @@ Feature: App
   Scenario: Allow user to delete one of their comments
     Given I have an existing comment
     And I have gone to the "Bananajour" app page
-    When I follow "Delete Comment"
+    When I press "Delete Comment"
     Then I should see "Your comment has been deleted."
     And I should not see "Fuck this shit."
   

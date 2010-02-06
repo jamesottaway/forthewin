@@ -12,7 +12,8 @@
   </li>
   <li>
     <label>Source:</label>
-    <%= @app.source %></li>
+    <%= @app.source %>
+  </li>
   <li><label>Description:</label><%= @app.description %></li>
 </ul>
 <fieldset>
@@ -28,6 +29,11 @@
 	    </header>
 	    <p><%= comment.text %></p>
 	  </li>
+	  <li>
+    <% semantic_form_for [@app, comment], :html => {:method => :delete}  do |f| %>
+  		<%= f.submit "Delete Comment" %>
+  	<% end %>
+  	</li>
 	<% end %>
   </ul>
 	

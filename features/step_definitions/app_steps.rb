@@ -15,3 +15,14 @@ Given /^I have gone to the "([^\"]*)" app page$/ do |app|
   Given 'I am on the homepage'
   And %{I follow "#{app}"}
 end
+
+Given /^I have an existing comment$/ do
+  Given 'I have an existing app'
+  And 'I am logged in as a user'
+  And 'I have gone to the "Bananajour" app page'
+  And 'I fill in "New Comment" with "So hot! Want to touch the hiney..."'
+  And 'I press "Add Comment"'
+  Then 'I should see "Thanks for the comment"'
+  And 'I should see "So hot! Want to touch the hiney..."'
+end
+
