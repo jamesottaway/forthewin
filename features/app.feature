@@ -1,11 +1,10 @@
 Feature: App
-  In order to allow users to evaluate apps
-  As a user
+  In order to allow railscampers to evaluate apps
+  As a person with a unique IP
   I want to submit, vote and comment on apps
 
   Scenario: Allow user to submit app
-    Given I am logged in as a user
-    And I am on the homepage
+    Given I am on the homepage
     When I follow "Submit App"
     And I fill in "Title" with "Bananajour"
     And I fill in "Author" with "Tim"
@@ -17,14 +16,8 @@ Feature: App
     And I should see "Bananajour"
     And I should see "http://computer:9331/forthewin.git"
 
-  Scenario: Ask an anonymous user to log in when trying to submit an app
-    Given I am on the homepage
-    When I follow "Submit App"
-    Then I should see "You must be logged in to access this page"
-
   Scenario: Allow user to comment on application
     Given I have an existing app
-    And I am logged in as a user
     And I have gone to the "Bananajour" app page
     And I fill in "New Comment" with "So hot! Want to touch the hiney..."
     And I press "Add Comment"
@@ -40,7 +33,6 @@ Feature: App
   
   Scenario: Allow user to vote on an application
     Given I have an existing app
-    And I am logged in as a user
     And I have gone to the "Bananajour" app page
     When I press "Vote Up"
     Then I should see "Thanks for voting!"
