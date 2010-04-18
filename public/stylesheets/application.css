@@ -127,6 +127,7 @@ fieldset.comments {
 
 fieldset.comments legend {
   font-size: 13px;
+  margin-left: 1em;
   padding: 0em 0.5em;
   color: #888;
 }
