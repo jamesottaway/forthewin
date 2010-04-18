@@ -1,11 +1,10 @@
 class VotesController < ApplicationController
-  before_filter :require_user
   before_filter :find_app
   
   def create
-    @vote = @app.votes.build(:user => current_user)
+    @vote = Vote.new
     flash[:notice] = @vote.save ? "Thanks for voting!" : "Sorry! You have already voted."
-    redirect_to @vote.votable
+    redirect_to app_path(params[:app_id])
   end
   
   def destroy

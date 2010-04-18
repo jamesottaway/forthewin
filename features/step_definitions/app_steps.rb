@@ -4,7 +4,6 @@ end
 
 Given /^I have voted on an existing application$/ do
   Given 'I have an existing app'
-  And 'I am logged in as a user'
   And 'I am on the homepage'
   When 'I follow "Bananajour"'
   And 'I press "Vote Up"'
@@ -18,7 +17,6 @@ end
 
 Given /^I have an existing comment$/ do
   Given 'I have an existing app'
-  And 'I am logged in as a user'
   And 'I have gone to the "Bananajour" app page'
   And 'I fill in "New Comment" with "So hot! Want to touch the hiney..."'
   And 'I press "Add Comment"'

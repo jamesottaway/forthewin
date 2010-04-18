@@ -1,6 +1,5 @@
 class AppsController < ApplicationController
-  before_filter :require_user, :only => [:new, :create]
-  
+
   def index
     @apps = App.all
   end
