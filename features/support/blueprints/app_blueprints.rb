@@ -8,8 +8,7 @@ App.blueprint do
   author "Tim" 
   demo "http://sup" 
   source "http://computer:9331/forthewin.git"
-  description "Why hello there" 
-  samplecode "`@user = User.new`"
+  description "Why hello there"
 end
 
 # And then called as App.make
