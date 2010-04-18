@@ -18,7 +18,8 @@ end
 Given /^I have an existing comment$/ do
   Given 'I have an existing app'
   And 'I have gone to the "Bananajour" app page'
-  And 'I fill in "New Comment" with "So hot! Want to touch the hiney..."'
+  And 'I fill in "comment_text" with "So hot! Want to touch the hiney..."'
+  And 'I fill in "comment_username" with "Jason Dude"'
   And 'I press "Add Comment"'
   Then 'I should see "Thanks for the comment"'
   And 'I should see "So hot! Want to touch the hiney..."'

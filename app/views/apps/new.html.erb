@@ -1,9 +1,9 @@
 <% semantic_form_for @app do |f| %>
 	<%= f.error_messages %>
 	<%= f.input :title %>
+	<%= f.input :description, :as => :text, :class => "description" %>
 	<%= f.input :author %>
-	<%= f.input :demo, :label => "Link to Demo" %>
-	<%= f.input :source, :label => "Link to Source" %>
-	<%= f.input :description, :as => :text %>
+	<%= f.input :demo, :label => "Link to Demo"%>
+	<%= f.input :source, :label => "Link to Source", :hint => "Preface with protocol (i.e. http:// or git://)"  %>
 	<%= f.submit "Submit" %>
 <% end %>
